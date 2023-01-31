@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
         'checking': (_) => CheckAuthScreen()
       },
       theme: ThemeData.light().copyWith(
+          useMaterial3: true,
           scaffoldBackgroundColor: Colors.grey[300],
           appBarTheme: AppBarTheme(elevation: 0, color: Colors.indigo),
           floatingActionButtonTheme: FloatingActionButtonThemeData(

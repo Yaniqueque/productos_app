@@ -27,12 +27,14 @@ class ProductsService extends ChangeNotifier {
   Future<List<Product>> loadProducts() async {
     this.isLoading = true;
     notifyListeners();
-
-    final url = Uri.https(_baseUrl, 'products.json?',
+    // final url2 = Uri.parse(
+    // 'https://flutter-varios-b2466-default-rtdb.firebaseio.com/products.json?AIzaSyAtJUDyFF1SersiXqJU9HBt54IJKdF_uks');
+    final url = Uri.https(_baseUrl, 'products.json',
         {'auth': await storage.read(key: 'token') ?? ''});
     final resp = await http.get(url);
 
     final Map<String, dynamic> productsMap = json.decode(resp.body);
+    // final Map<String, dynamic> productsMap = json.decode(json.encode(resp.body));
 
     productsMap.forEach((key, value) {
       final tempProduct = Product.fromMap(value);

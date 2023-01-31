@@ -48,7 +48,7 @@ class LoginScreen extends StatelessWidget {
                         Colors.indigo.withOpacity(0.1)),
                     shape: MaterialStateProperty.all(StadiumBorder())),
                 child: Text(
-                  'Crear una nueva cuenta',
+                  'Create a new account',
                   style: TextStyle(fontSize: 18, color: Colors.black87),
                 )),
             SizedBox(height: 50),
@@ -76,7 +76,7 @@ class _LoginForm extends StatelessWidget {
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecorations.authInputDecoration(
                   hintText: 'john.doe@gmail.com',
-                  labelText: 'Correo electronico',
+                  labelText: 'Email',
                   prefixIcon: Icons.alternate_email_rounded),
               onChanged: (value) => loginForm.email = value,
               validator: (value) {
@@ -98,7 +98,7 @@ class _LoginForm extends StatelessWidget {
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecorations.authInputDecoration(
                   hintText: '*********',
-                  labelText: 'Contraseña',
+                  labelText: 'Password',
                   prefixIcon: Icons.lock_outline),
               onChanged: (value) => loginForm.password = value,
               validator: (value) {
