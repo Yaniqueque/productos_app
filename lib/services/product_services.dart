@@ -9,7 +9,7 @@ import 'package:productos_app/models/models.dart';
 import 'package:http/http.dart' as http;
 
 class ProductsService extends ChangeNotifier {
-  final String _baseUrl = 'flutter-varios-b2466-default-rtdb.firebaseio.com';
+  final String _baseUrl = 'Your base url';
 
   final List<Product> products = [];
   Product? selectedProduct;
